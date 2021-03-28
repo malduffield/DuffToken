@@ -5,3 +5,6 @@ install the solidity plugin
 
 get started by creating a github account..
 then run the command git clone
+
+This is the DuffToken project
+https://www.youtube.com/watch?v=XdKv5uwEk5A&ab_channel=DappUniversity
