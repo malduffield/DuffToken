@@ -6,7 +6,11 @@ contract DuffToken {
     // way to read the total number of tokens
   uint256 public totalSupply;
 
-  constructor () public {
-    totalSupply = 1000000;
+  mapping(address => uint256) public balanceOf;
+
+  constructor (uint256 _initialSupply) public {
+    // allocate initial supply
+    balanceOf[msg.sender] = _initialSupply;
+    totalSupply = _initialSupply;
   }
 }
