@@ -2,8 +2,24 @@
 var DuffToken = artifacts.require("./DuffToken.sol");
 
 contract('DuffToken', function(accounts) {
+  var tokenInstance;
 
-  it('sets the total supply upon deployment', function() {
+  it('initialises the contract with the correct values', function() {
+      return DuffToken.deployed().then(function(instance) {
+        tokenInstance = instance;
+        return tokenInstance.name();
+      }).then(function(name) {
+        assert.equal(name, 'Duff Token', 'has the correct name');
+        return tokenInstance.symbol();
+      }).then(function(symbol) {
+        assert.equal(symbol, 'DUFT', 'has the correct symbol');
+        return tokenInstance.standard();
+      }).then(function(standard) {
+        assert.equal(standard, 'Duff Token v1.0', 'has the correct standard');
+      });
+  })
+
+  it('allocates the initial supply upon deployment', function() {
     return DuffToken.deployed().then(function(instance) {
       tokenInstance = instance;
       return tokenInstance.totalSupply();
