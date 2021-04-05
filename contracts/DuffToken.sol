@@ -20,13 +20,12 @@ contract DuffToken {
     totalSupply = _initialSupply;
   }
 
-  // transfer
-  // exception
-  // return a boolean
+  // exception usiong keywork require
   // transfer event
+  // return a boolean
+  // NOTE WRITE TESTS FIRST AS PER TDD...
   function transfer(address _to, uint256 _value) public returns (bool success) {
-    // exception if account doesnt have enough
-    // require ketyword saying if this is true carry on else fail.
+    // require ketyword saying if this is true carry on else fail by throwing an exception.
     require(balanceOf[msg.sender] >= _value);
 
     // transfer the balance from msg.sender to address passed in
