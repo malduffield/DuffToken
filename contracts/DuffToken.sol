@@ -12,6 +12,12 @@ contract DuffToken {
     uint256 _value
     );
 
+  event Approval(
+    address indexed _owner,
+    address indexed _spender,
+    uint256 _value
+    );
+
   mapping(address => uint256) public balanceOf;
 
   constructor (uint256 _initialSupply) public {
@@ -38,4 +44,20 @@ contract DuffToken {
     // return a boolean
     return true;
   }
+
+  // approve function
+  function approve(address _spender, uint256 _value) public returns(bool success) {
+
+
+
+
+
+    emit Approval(msg.sender, _spender, _value);
+    return true;
+  }
+
+
+  // transferFrom
+
+
 }

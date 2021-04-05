@@ -13,4 +13,4 @@ updated to now add the following commands:
 
 Transfer - this transfers tokens from the sender account to the destination account as per spec on https://eips.ethereum.org/EIPS/eip-20
 
-// got to 1:44:56 in the tutorial..
+// got to 1:08:33 in the tutorial about to add the approval function.
