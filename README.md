@@ -8,3 +8,7 @@ then run the command git clone
 
 This is the DuffToken project
 https://www.youtube.com/watch?v=XdKv5uwEk5A&ab_channel=DappUniversity
+
+updated to now add the following commands:
+
+Transfer - this transfers tokens from the sender account to the destination account as per spec on https://eips.ethereum.org/EIPS/eip-20
