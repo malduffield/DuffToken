@@ -20,19 +20,20 @@ contract DuffToken {
     totalSupply = _initialSupply;
   }
 
-  // exception usiong keywork require
+  // exception using keywork require
   // transfer event
   // return a boolean
-  // NOTE WRITE TESTS FIRST AS PER TDD...
+  // NOTE WRITE TESTS FIRST!!!!!
   function transfer(address _to, uint256 _value) public returns (bool success) {
-    // require ketyword saying if this is true carry on else fail by throwing an exception.
+    // keyword require means if this is true carry on else fail by throwing an exception.
     require(balanceOf[msg.sender] >= _value);
 
     // transfer the balance from msg.sender to address passed in
     balanceOf[msg.sender] -= _value;
     balanceOf[_to] += _value;
 
-    // transfer event
+    // first transfer event as per ERC-20 spec for transfer function documented here:
+    // https://eips.ethereum.org/EIPS/eip-20
     emit Transfer(msg.sender, _to, _value);
 
     // return a boolean
