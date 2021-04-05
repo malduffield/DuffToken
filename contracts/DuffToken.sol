@@ -32,8 +32,7 @@ contract DuffToken {
     balanceOf[msg.sender] -= _value;
     balanceOf[_to] += _value;
 
-    // first transfer event as per ERC-20 spec for transfer function documented here:
-    // https://eips.ethereum.org/EIPS/eip-20
+    // fire transfer event as per ERC-20 spec documented here: https://eips.ethereum.org/EIPS/eip-20
     emit Transfer(msg.sender, _to, _value);
 
     // return a boolean
